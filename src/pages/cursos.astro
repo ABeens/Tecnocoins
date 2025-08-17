@@ -1,7 +1,6 @@
 ---
-import '../styles/global.css';
 import Layout from '../layouts/Layout.astro';
-import tradingBasic from '../assets/trading-basic.jpg';
+import PaymentModal from '../components/PaymentModal.astro';
 ---
 
 <Layout>
@@ -15,7 +14,14 @@ import tradingBasic from '../assets/trading-basic.jpg';
         <h3 class="text-xl font-bold text-[#2A6F97] mb-2">Trading Básico</h3>
         <p class="text-[#4B8BBE] font-semibold mb-2">$49.99 USD</p>
         <p class="text-[#2A6F97] mb-4">Aprende los fundamentos del trading y cómo empezar a invertir en los mercados financieros desde cero.</p>
-        <button class="bg-[#4B8BBE] text-white font-bold py-2 px-6 rounded-lg shadow hover:bg-[#2A6F97] transition">Ver más</button>
+        <button 
+          class="bg-[#4B8BBE] text-white font-bold py-2 px-6 rounded-lg shadow hover:bg-[#2A6F97] transition"
+          data-course-button
+          data-course-title="Trading Básico"
+          data-course-price="$49.99 USD"
+        >
+          Quiero este curso
+        </button>
       </div>
       <!-- Curso 2 -->
       <div class="bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center text-center border border-[#eaf6fb] hover:scale-105 transition-transform">
@@ -23,7 +29,14 @@ import tradingBasic from '../assets/trading-basic.jpg';
         <h3 class="text-xl font-bold text-[#2A6F97] mb-2">Finanzas Personales</h3>
         <p class="text-[#4B8BBE] font-semibold mb-2">$39.99 USD</p>
         <p class="text-[#2A6F97] mb-4">Domina la gestión de tu dinero, aprende a ahorrar, invertir y planificar tu futuro financiero.</p>
-        <button class="bg-[#4B8BBE] text-white font-bold py-2 px-6 rounded-lg shadow hover:bg-[#2A6F97] transition">Ver más</button>
+        <button 
+          class="bg-[#4B8BBE] text-white font-bold py-2 px-6 rounded-lg shadow hover:bg-[#2A6F97] transition"
+          data-course-button
+          data-course-title="Finanzas Personales"
+          data-course-price="$39.99 USD"
+        >
+          Quiero este curso
+        </button>
       </div>
       <!-- Curso 3 -->
       <div class="bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center text-center border border-[#eaf6fb] hover:scale-105 transition-transform">
@@ -31,7 +44,14 @@ import tradingBasic from '../assets/trading-basic.jpg';
         <h3 class="text-xl font-bold text-[#2A6F97] mb-2">Inversiones Inteligentes</h3>
         <p class="text-[#4B8BBE] font-semibold mb-2">$59.99 USD</p>
         <p class="text-[#2A6F97] mb-4">Descubre estrategias avanzadas para invertir de manera inteligente y maximizar tus rendimientos.</p>
-        <button class="bg-[#4B8BBE] text-white font-bold py-2 px-6 rounded-lg shadow hover:bg-[#2A6F97] transition">Ver más</button>
+        <button 
+          class="bg-[#4B8BBE] text-white font-bold py-2 px-6 rounded-lg shadow hover:bg-[#2A6F97] transition"
+          data-course-button
+          data-course-title="Inversiones Inteligentes"
+          data-course-price="$59.99 USD"
+        >
+          Quiero este curso
+        </button>
       </div>
       <!-- Curso 4 -->
       <div class="bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center text-center border border-[#eaf6fb] hover:scale-105 transition-transform">
@@ -39,7 +59,14 @@ import tradingBasic from '../assets/trading-basic.jpg';
         <h3 class="text-xl font-bold text-[#2A6F97] mb-2">Criptomonedas para Principiantes</h3>
         <p class="text-[#4B8BBE] font-semibold mb-2">$44.99 USD</p>
         <p class="text-[#2A6F97] mb-4">Conoce el mundo de las criptomonedas, cómo funcionan y cómo empezar a invertir de forma segura.</p>
-        <button class="bg-[#4B8BBE] text-white font-bold py-2 px-6 rounded-lg shadow hover:bg-[#2A6F97] transition">Ver más</button>
+        <button 
+          class="bg-[#4B8BBE] text-white font-bold py-2 px-6 rounded-lg shadow hover:bg-[#2A6F97] transition"
+          data-course-button
+          data-course-title="Criptomonedas para Principiantes"
+          data-course-price="$44.99 USD"
+        >
+          Quiero este curso
+        </button>
       </div>
       <!-- Curso 5 -->
       <div class="bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center text-center border border-[#eaf6fb] hover:scale-105 transition-transform">
@@ -47,7 +74,14 @@ import tradingBasic from '../assets/trading-basic.jpg';
         <h3 class="text-xl font-bold text-[#2A6F97] mb-2">Bolsa de Valores desde Cero</h3>
         <p class="text-[#4B8BBE] font-semibold mb-2">$54.99 USD</p>
         <p class="text-[#2A6F97] mb-4">Aprende a invertir en la bolsa de valores, entender los mercados y tomar decisiones informadas.</p>
-        <button class="bg-[#4B8BBE] text-white font-bold py-2 px-6 rounded-lg shadow hover:bg-[#2A6F97] transition">Ver más</button>
+        <button 
+          class="bg-[#4B8BBE] text-white font-bold py-2 px-6 rounded-lg shadow hover:bg-[#2A6F97] transition"
+          data-course-button
+          data-course-title="Bolsa de Valores desde Cero"
+          data-course-price="$54.99 USD"
+        >
+          Quiero este curso
+        </button>
       </div>
       <!-- Curso 6 -->
       <div class="bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center text-center border border-[#eaf6fb] hover:scale-105 transition-transform">
@@ -55,8 +89,17 @@ import tradingBasic from '../assets/trading-basic.jpg';
         <h3 class="text-xl font-bold text-[#2A6F97] mb-2">Emprendimiento y Finanzas</h3>
         <p class="text-[#4B8BBE] font-semibold mb-2">$34.99 USD</p>
         <p class="text-[#2A6F97] mb-4">Desarrolla tu mentalidad emprendedora y aprende a gestionar las finanzas de tu propio negocio.</p>
-        <button class="bg-[#4B8BBE] text-white font-bold py-2 px-6 rounded-lg shadow hover:bg-[#2A6F97] transition">Ver más</button>
+        <button 
+          class="bg-[#4B8BBE] text-white font-bold py-2 px-6 rounded-lg shadow hover:bg-[#2A6F97] transition"
+          data-course-button
+          data-course-title="Emprendimiento y Finanzas"
+          data-course-price="$34.99 USD"
+        >
+          Quiero este curso
+        </button>
       </div>
     </div>
   </section>
+  
+  <PaymentModal courseTitle="" coursePrice="" />
 </Layout> 

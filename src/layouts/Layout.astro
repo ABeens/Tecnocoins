@@ -1,3 +1,8 @@
+---
+import '../styles/global.css';
+
+---
+
 <!doctype html>
 <html lang="en">
 	<head>
@@ -19,7 +24,7 @@
 				<a href="/" class="text-[#2A6F97] font-semibold hover:text-[#4B8BBE] transition">Inicio</a>
 				<a href="/servicios" class="text-[#2A6F97] font-semibold hover:text-[#4B8BBE] transition">Servicios</a>
 				<a href="/cursos" class="text-[#2A6F97] font-semibold hover:text-[#4B8BBE] transition">Cursos</a>
-				<a href="/index#contacto" class="text-[#2A6F97] font-semibold hover:text-[#4B8BBE] transition">Nosotros</a>
+				<a href="/nosotros" class="text-[#2A6F97] font-semibold hover:text-[#4B8BBE] transition">Nosotros</a>
 			</div>
 			<div class="md:hidden">
 				<button id="menu-btn" class="focus:outline-none" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
@@ -31,17 +36,368 @@
 			<a href="/" class="text-[#2A6F97] font-semibold hover:text-[#4B8BBE] transition" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Inicio</a>
 			<a href="/servicios" class="text-[#2A6F97] font-semibold hover:text-[#4B8BBE] transition" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Servicios</a>
 			<a href="/cursos" class="text-[#2A6F97] font-semibold hover:text-[#4B8BBE] transition" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Cursos</a>
-			<a href="/index#contacto" class="text-[#2A6F97] font-semibold hover:text-[#4B8BBE] transition" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Nosotros</a>
+			<a href="/nosotros" class="text-[#2A6F97] font-semibold hover:text-[#4B8BBE] transition" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Nosotros</a>
 		</div>
 		<slot />
+		
+		<!-- Botones de redes sociales -->
+		<section class="w-full flex justify-center py-6 bg-[#f6fbfd]">
+			<div class="flex gap-6">
+				<a href="https://facebook.com" target="_blank" rel="noopener" class="bg-[#1877f3] hover:bg-[#145db2] text-white rounded-full p-3 shadow-lg transition flex items-center justify-center" title="Facebook">
+					<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="w-6 h-6"><path d="M22.675 0h-21.35C.595 0 0 .592 0 1.326v21.348C0 23.408.595 24 1.326 24h11.495v-9.294H9.691v-3.622h3.13V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.797.143v3.24l-1.918.001c-1.504 0-1.797.715-1.797 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116C23.406 24 24 23.408 24 22.674V1.326C24 .592 23.406 0 22.675 0"/></svg>
+				</a>
+				<a href="https://wa.me/" target="_blank" rel="noopener" class="bg-[#25d366] hover:bg-[#1da851] text-white rounded-full p-3 shadow-lg transition flex items-center justify-center" title="WhatsApp">
+					<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="w-6 h-6"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.945C.16 5.281 5.3.14 12 .14c3.17 0 6.155 1.233 8.413 3.484a11.822 11.822 0 0 1 3.48 8.409c-.003 6.627-5.384 12.008-12.01 12.008a11.87 11.87 0 0 1-5.938-1.59L.057 24zm6.597-3.807c1.735.995 3.276 1.591 5.347 1.593 5.448-.002 9.886-4.437 9.889-9.884.002-5.462-4.415-9.89-9.881-9.892-5.462.002-9.887 4.437-9.889 9.884a9.822 9.822 0 0 0 1.599 5.354l-.999 3.648 3.934-.987zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.521.151-.174.2-.298.3-.497.099-.198.05-.372-.025-.521-.075-.149-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.363.709.306 1.262.489 1.694.626.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+				</a>
+				<a href="https://youtube.com" target="_blank" rel="noopener" class="bg-[#ff0000] hover:bg-[#b30000] text-white rounded-full p-3 shadow-lg transition flex items-center justify-center" title="YouTube">
+					<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="w-6 h-6"><path d="M23.498 6.186a2.994 2.994 0 0 0-2.112-2.112C19.458 3.5 12 3.5 12 3.5s-7.458 0-9.386.574A2.994 2.994 0 0 0 .502 6.186C0 8.114 0 12 0 12s0 3.886.502 5.814a2.994 2.994 0 0 0 2.112 2.112C4.542 20.5 12 20.5 12 20.5s7.458 0 9.386-.574a2.994 2.994 0 0 0 2.112-2.112C24 15.886 24 12 24 12s0-3.886-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+				</a>
+				<a href="https://t.me/" target="_blank" rel="noopener" class="bg-[#229ed9] hover:bg-[#176b96] text-white rounded-full p-3 shadow-lg transition flex items-center justify-center" title="Telegram">
+					<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="w-6 h-6"><path d="M12 0C5.371 0 0 5.371 0 12c0 6.629 5.371 12 12 12s12-5.371 12-12c0-6.629-5.371-12-12-12zm5.707 8.293l-1.414 8.485c-.104.624-.447.775-.905.482l-2.507-1.848-1.209 1.164c-.134.134-.246.246-.504.246l.18-2.537 4.617-4.168c.2-.18-.043-.281-.312-.101l-5.711 3.594-2.459-.768c-.534-.166-.544-.534.112-.789l9.6-3.705c.447-.166.84.101.697.784z"/></svg>
+				</a>
+			</div>
+		</section>
+		
+		<!-- Chat Button -->
+		<button id="chat-button" onclick="openChatModal()" class="fixed bottom-6 right-6 bg-gradient-to-r from-[#2A6F97] to-[#4B8BBE] text-white rounded-full p-4 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110 z-50 group animate-dramatic-entrance">
+			<!-- Initial text label -->
+			<div id="chat-label" class="absolute -left-40 top-1/2 transform -translate-y-1/2 bg-white text-[#2A6F97] px-4 py-2 rounded-lg shadow-lg font-semibold text-sm whitespace-nowrap animate-label-bounce">
+				¡Habla con un agente! 💬
+				<div class="absolute right-0 top-1/2 transform translate-x-full -translate-y-1/2 w-0 h-0 border-l-8 border-l-white border-y-4 border-y-transparent"></div>
+			</div>
+			
+			<svg class="w-6 h-6 transition-transform group-hover:rotate-12 relative z-10" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+				<path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+				<path d="M8 9h8"/>
+				<path d="M8 13h6"/>
+			</svg>
+			<span class="absolute -top-12 right-0 bg-gray-800 text-white text-sm px-3 py-2 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+				Habla con un agente
+			</span>
+		</button>
+
+		<!-- Chat Modal -->
+		<div id="chat-modal" class="fixed inset-0 z-[60] hidden transition-all duration-300" style="background-color: rgba(0, 0, 0, 0.3);">
+			<div class="flex items-center justify-center min-h-screen p-4">
+				<div class="bg-white rounded-2xl shadow-2xl w-full max-w-md h-[600px] flex flex-col transform scale-95 transition-transform duration-300" id="chat-container">
+					<!-- Chat Header -->
+					<div class="bg-gradient-to-r from-[#2A6F97] to-[#4B8BBE] text-white p-4 rounded-t-2xl flex items-center justify-between">
+						<div class="flex items-center gap-3">
+							<div class="w-10 h-10 bg-white bg-opacity-20 rounded-full flex items-center justify-center">
+								<svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+									<path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+								</svg>
+							</div>
+							<div>
+								<h3 class="font-semibold">Agente Tecnocoins</h3>
+								<div class="flex items-center gap-2 text-sm opacity-90">
+									<div class="w-2 h-2 bg-green-400 rounded-full"></div>
+									En línea
+								</div>
+							</div>
+						</div>
+						<button onclick="closeChatModal()" class="text-white hover:bg-white hover:bg-opacity-20 rounded-full p-2 transition-colors">
+							<svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+								<path d="M6 6L18 18M6 18L18 6"/>
+							</svg>
+						</button>
+					</div>
+
+					<!-- Chat Messages -->
+					<div id="chat-messages" class="flex-1 p-4 overflow-y-auto bg-gray-50 flex flex-col gap-3">
+						<div class="message-container agent-container">
+							<div class="message agent-message">
+								¡Hola! 👋 Soy tu asistente virtual de Tecnocoins. ¿En qué puedo ayudarte hoy?
+							</div>
+						</div>
+					</div>
+
+					<!-- Chat Input -->
+					<div class="p-4 bg-white border-t border-gray-200 rounded-b-2xl">
+						<div class="flex gap-2">
+							<input type="text" id="chat-input" placeholder="Escribe tu mensaje..." 
+								class="flex-1 border border-gray-300 rounded-full px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#2A6F97] focus:border-transparent"
+								onkeypress="handleKeyPress(event)">
+							<button onclick="sendMessage()" class="bg-gradient-to-r from-[#2A6F97] to-[#4B8BBE] text-white rounded-full p-2 hover:shadow-lg transition-all">
+								<svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+									<path d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/>
+								</svg>
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script>
+		// Chat functionality - Define functions globally
+		window.openChatModal = function() {
+			const modal = document.getElementById('chat-modal');
+			const container = document.getElementById('chat-container');
+			modal.classList.remove('hidden');
+			setTimeout(() => {
+				modal.classList.remove('opacity-0');
+				container.classList.remove('scale-95');
+				container.classList.add('scale-100');
+			}, 10);
+			document.getElementById('chat-input').focus();
+		};
+
+		window.closeChatModal = function() {
+			const modal = document.getElementById('chat-modal');
+			const container = document.getElementById('chat-container');
+			modal.classList.add('opacity-0');
+			container.classList.remove('scale-100');
+			container.classList.add('scale-95');
+			setTimeout(() => {
+				modal.classList.add('hidden');
+			}, 300);
+		};
+
+		window.sendMessage = function() {
+			const input = document.getElementById('chat-input');
+			const message = input.value.trim();
+			
+			if (message) {
+				addMessage(message, true);
+				input.value = '';
+				
+				// Show typing indicator
+				showTypingIndicator();
+				
+				// Simulate agent response after 1-3 seconds
+				setTimeout(() => {
+					removeTypingIndicator();
+					const randomResponse = agentResponses[Math.floor(Math.random() * agentResponses.length)];
+					addMessage(randomResponse, false);
+				}, Math.random() * 2000 + 1000);
+			}
+		};
+
+		window.handleKeyPress = function(event) {
+			if (event.key === 'Enter') {
+				sendMessage();
+			}
+		};
+
+		// Random agent responses
+		const agentResponses = [
+			"¡Excelente pregunta! En Tecnocoins ofrecemos servicios de desarrollo blockchain y consultoría en criptomonedas. ¿Te interesa algún proyecto específico?",
+			"Hola! 🚀 Somos especialistas en tecnología blockchain. Podemos ayudarte con smart contracts, DeFi, NFTs y mucho más. ¿Qué tienes en mente?",
+			"¡Genial que nos contactes! Nuestros cursos de blockchain están diseñados desde nivel básico hasta avanzado. ¿Cuál es tu experiencia actual?",
+			"Perfecto! En Tecnocoins combinamos educación y desarrollo. Tenemos tanto cursos como servicios de desarrollo. ¿Prefieres aprender o necesitas un proyecto?",
+			"¡Hola! 💡 Trabajamos con las principales redes blockchain: Ethereum, Solana, Polygon y más. ¿En qué blockchain estás interesado?",
+			"Excelente! Ofrecemos desde auditorías de smart contracts hasta desarrollo completo de DApps. ¿Podrías contarme más sobre tu proyecto?",
+			"¡Hola! 🎯 Nuestros servicios incluyen desarrollo, consultoría y educación blockchain. ¿Qué área te interesa más?",
+			"Perfecto timing! Estamos lanzando nuevos cursos este mes. ¿Te interesa desarrollo, trading o inversiones en crypto?"
+		];
+
+		// Remove attention effects after initial display
+		setTimeout(() => {
+			const button = document.getElementById('chat-button');
+			const label = document.getElementById('chat-label');
+			if (button) {
+				button.classList.remove('animate-dramatic-entrance');
+			}
+			if (label) {
+				label.style.display = 'none';
+			}
+		}, 4000);
+
+
+		function addMessage(message, isUser = false) {
+			const messagesContainer = document.getElementById('chat-messages');
+			
+			// Create container for message alignment
+			const containerDiv = document.createElement('div');
+			containerDiv.className = `message-container ${isUser ? 'user-container' : 'agent-container'}`;
+			
+			// Create message bubble
+			const messageDiv = document.createElement('div');
+			messageDiv.className = `message ${isUser ? 'user-message' : 'agent-message'}`;
+			messageDiv.textContent = message;
+			
+			containerDiv.appendChild(messageDiv);
+			messagesContainer.appendChild(containerDiv);
+			messagesContainer.scrollTop = messagesContainer.scrollHeight;
+		}
+
+		function showTypingIndicator() {
+			const messagesContainer = document.getElementById('chat-messages');
+			
+			// Create container for typing indicator
+			const containerDiv = document.createElement('div');
+			containerDiv.className = 'message-container agent-container';
+			containerDiv.id = 'typing-container';
+			
+			const typingDiv = document.createElement('div');
+			typingDiv.className = 'message agent-message typing-indicator';
+			typingDiv.innerHTML = '<div class="typing-content"><span class="typing-text">Agente escribiendo</span><div class="typing-dots"><span></span><span></span><span></span></div></div>';
+			
+			containerDiv.appendChild(typingDiv);
+			messagesContainer.appendChild(containerDiv);
+			messagesContainer.scrollTop = messagesContainer.scrollHeight;
+		}
+
+		function removeTypingIndicator() {
+			const typingContainer = document.getElementById('typing-container');
+			if (typingContainer) {
+				typingContainer.remove();
+			}
+		}
+
+
+		// Close modal when clicking outside
+		document.getElementById('chat-modal').addEventListener('click', function(e) {
+			if (e.target === this) {
+				closeChatModal();
+			}
+		});
+		</script>
 	</body>
 </html>
 
-<style>
+<style is:global>
 	html,
 	body {
 		margin: 0;
 		width: 100%;
 		height: 100%;
+	}
+
+	@keyframes dramatic-entrance {
+		0% {
+			transform: scale(0) rotate(180deg);
+			opacity: 0;
+		}
+		30% {
+			transform: scale(1.5) rotate(90deg);
+			opacity: 0.7;
+		}
+		60% {
+			transform: scale(0.8) rotate(0deg);
+			opacity: 1;
+		}
+		80% {
+			transform: scale(1.1) rotate(0deg);
+		}
+		100% {
+			transform: scale(1) rotate(0deg);
+			opacity: 1;
+		}
+	}
+
+	@keyframes label-bounce {
+		0%, 20%, 50%, 80%, 100% {
+			transform: translateY(0) translateX(0);
+		}
+		40% {
+			transform: translateY(-10px) translateX(-5px);
+		}
+		60% {
+			transform: translateY(-5px) translateX(5px);
+		}
+	}
+
+	.animate-dramatic-entrance {
+		animation: dramatic-entrance 1.5s ease-out 1.5s both;
+	}
+
+	.animate-label-bounce {
+		animation: label-bounce 2s ease-in-out infinite;
+	}
+
+	/* Chat Modal Styles */
+	.message-container {
+		display: flex;
+		width: 100%;
+	}
+
+	.user-container {
+		justify-content: flex-end;
+	}
+
+	.agent-container {
+		justify-content: flex-start;
+	}
+
+	.message {
+		margin-bottom: 12px;
+		padding: 12px 16px;
+		border-radius: 18px;
+		max-width: 80%;
+		line-height: 1.4;
+		animation: fadeInUp 0.3s ease-out;
+	}
+
+	.user-message {
+		background: linear-gradient(135deg, #2A6F97, #4B8BBE);
+		color: white;
+		border-bottom-right-radius: 4px;
+	}
+
+	.agent-message {
+		background: white;
+		color: #333;
+		border: 1px solid #e5e7eb;
+		border-bottom-left-radius: 4px;
+		box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+	}
+
+	.typing-indicator {
+		width: auto;
+		padding: 16px 20px;
+	}
+
+	.typing-content {
+		display: flex;
+		align-items: center;
+		gap: 12px;
+	}
+
+	.typing-text {
+		color: #6b7280;
+		font-style: italic;
+		font-size: 14px;
+	}
+
+	.typing-dots {
+		display: flex;
+		gap: 4px;
+		align-items: center;
+	}
+
+	.typing-dots span {
+		width: 8px;
+		height: 8px;
+		border-radius: 50%;
+		background: #9ca3af;
+		animation: typing 1.4s infinite ease-in-out;
+	}
+
+	.typing-dots span:nth-child(1) { animation-delay: 0ms; }
+	.typing-dots span:nth-child(2) { animation-delay: 200ms; }
+	.typing-dots span:nth-child(3) { animation-delay: 400ms; }
+
+	@keyframes typing {
+		0%, 60%, 100% {
+			transform: translateY(0);
+			opacity: 0.4;
+		}
+		30% {
+			transform: translateY(-10px);
+			opacity: 1;
+		}
+	}
+
+	@keyframes fadeInUp {
+		from {
+			opacity: 0;
+			transform: translateY(10px);
+		}
+		to {
+			opacity: 1;
+			transform: translateY(0);
+		}
 	}
 </style>
