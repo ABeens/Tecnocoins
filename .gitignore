@@ -96,3 +96,5 @@ config/keys.js
 *.backup
 *.old
 
+.astro/types.d.ts
+node_modules/.vite/deps/_metadata.json

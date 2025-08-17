@@ -148,10 +148,12 @@ const basePath = `${import.meta.env.BASE_URL}/`;
 				container.classList.add('scale-100');
 			}, 10);
 			
-			// Focus input with delay for mobile
-			setTimeout(() => {
-				document.getElementById('chat-input').focus();
-			}, 300);
+			// Only auto-focus on desktop, not on mobile
+			if (window.innerWidth >= 768) {
+				setTimeout(() => {
+					document.getElementById('chat-input').focus();
+				}, 300);
+			}
 		};
 
 		window.closeChatModal = function() {
