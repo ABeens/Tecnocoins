@@ -5,6 +5,8 @@ import CryptoTicker from '../components/CryptoTicker.astro';
 import PaymentModal from '../components/PaymentModal.astro';
 import tradingBasic from '../assets/trading-basic.jpg';
 import tecnocoinsImg from '../assets/tecnocoins.jpeg';
+import { Image } from 'astro:assets';
+
 
 const basePath = `${import.meta.env.BASE_URL}/`;
 ---
@@ -47,7 +49,7 @@ const basePath = `${import.meta.env.BASE_URL}/`;
   <section class="w-full flex justify-center px-0">
     <div class="bg-white rounded-none shadow-none w-full flex flex-col md:flex-row items-center md:justify-around justify-center text-left border-0 py-8 gap-8">
       <div class="flex-shrink-0 flex justify-center items-center w-full md:w-auto mb-6 md:mb-0">
-        <img src={tradingBasic.src} alt="Trading Básico" class="w-56 md:w-[420px] lg:w-[520px] xl:w-[600px] max-w-full opacity-90" />
+        <Image src={tradingBasic} alt="Trading Básico" class="w-56 md:w-[420px] lg:w-[520px] xl:w-[600px] max-w-full opacity-90" />
       </div>
       <div class="flex flex-col items-start text-left w-full max-w-2xl px-6 md:px-10">
         <h2 class="text-2xl md:text-3xl font-bold mb-4 text-[#2A6F97]">Nuestra Misión</h2>
@@ -67,7 +69,7 @@ const basePath = `${import.meta.env.BASE_URL}/`;
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-6xl">
       <!-- Curso 1 -->
       <div class="bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center text-center border border-[#eaf6fb] hover:scale-105 transition-transform">
-        <img src={tecnocoinsImg} alt="Trading Básico" class="w-32 h-32 object-cover rounded-xl mb-4" />
+        <Image src={tecnocoinsImg} alt="Trading Básico" class="w-32 h-32 object-cover rounded-xl mb-4" />
         <h3 class="text-xl font-bold text-[#2A6F97] mb-2">Trading Básico</h3>
         <p class="text-[#4B8BBE] font-semibold mb-2">$49.99 USD</p>
         <p class="text-[#2A6F97] mb-4">Aprende los fundamentos del trading y cómo empezar a invertir en los mercados financieros desde cero.</p>
@@ -82,7 +84,7 @@ const basePath = `${import.meta.env.BASE_URL}/`;
       </div>
       <!-- Curso 2 -->
       <div class="bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center text-center border border-[#eaf6fb] hover:scale-105 transition-transform">
-        <img src={tecnocoinsImg} alt="Finanzas Personales" class="w-32 h-32 object-cover rounded-xl mb-4" />
+        <Image src={tecnocoinsImg} alt="Finanzas Personales" class="w-32 h-32 object-cover rounded-xl mb-4" />
         <h3 class="text-xl font-bold text-[#2A6F97] mb-2">Finanzas Personales</h3>
         <p class="text-[#4B8BBE] font-semibold mb-2">$39.99 USD</p>
         <p class="text-[#2A6F97] mb-4">Domina la gestión de tu dinero, aprende a ahorrar, invertir y planificar tu futuro financiero.</p>
@@ -97,7 +99,7 @@ const basePath = `${import.meta.env.BASE_URL}/`;
       </div>
       <!-- Curso 3 -->
       <div class="bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center text-center border border-[#eaf6fb] hover:scale-105 transition-transform">
-        <img src={tecnocoinsImg} alt="Inversiones Inteligentes" class="w-32 h-32 object-cover rounded-xl mb-4" />
+        <Image src={tecnocoinsImg} alt="Inversiones Inteligentes" class="w-32 h-32 object-cover rounded-xl mb-4" />
         <h3 class="text-xl font-bold text-[#2A6F97] mb-2">Inversiones Inteligentes</h3>
         <p class="text-[#4B8BBE] font-semibold mb-2">$59.99 USD</p>
         <p class="text-[#2A6F97] mb-4">Descubre estrategias avanzadas para invertir de manera inteligente y maximizar tus rendimientos.</p>
