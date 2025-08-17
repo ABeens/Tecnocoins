@@ -1,5 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
+
+const basePath = import.meta.env.BASE_URL;
 ---
 
 <Layout>
@@ -12,7 +14,7 @@ import Layout from '../layouts/Layout.astro';
       </p>
       <div class="space-y-4">
         <a 
-          href="/" 
+          href={basePath} 
           class="inline-block bg-[#2A6F97] text-white font-bold py-3 px-8 rounded-lg hover:bg-[#1e4e6c] transition"
         >
           Volver al Inicio
@@ -20,9 +22,9 @@ import Layout from '../layouts/Layout.astro';
         <div class="text-sm text-gray-500">
           <p>O visita nuestras secciones principales:</p>
           <div class="flex flex-wrap justify-center gap-4 mt-2">
-            <a href="/cursos" class="text-[#4B8BBE] hover:underline">Cursos</a>
-            <a href="/servicios" class="text-[#4B8BBE] hover:underline">Servicios</a>
-            <a href="/nosotros" class="text-[#4B8BBE] hover:underline">Nosotros</a>
+            <a href={`${basePath}cursos`} class="text-[#4B8BBE] hover:underline">Cursos</a>
+            <a href={`${basePath}servicios`} class="text-[#4B8BBE] hover:underline">Servicios</a>
+            <a href={`${basePath}nosotros`} class="text-[#4B8BBE] hover:underline">Nosotros</a>
           </div>
         </div>
       </div>
