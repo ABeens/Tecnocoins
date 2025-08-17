@@ -5,8 +5,8 @@ import tailwindcss from '@tailwindcss/vite';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://abeens.github.io/Tecnocoins/',
-  base:'.',
+  site: 'https://abeens.github.io',
+  base:'Tecnocoins',
   vite: {
     plugins: [tailwindcss()]
   }
