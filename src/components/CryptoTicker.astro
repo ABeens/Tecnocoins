@@ -1,0 +1,205 @@
+---
+// CryptoTicker component with real-time data from Binance API
+---
+
+<div class="crypto-ticker">
+  <div class="crypto-ticker-content" id="crypto-ticker-content">
+    <!-- Loading placeholder -->
+    <div class="crypto-pair loading-placeholder">
+      <div class="flex items-center gap-3">
+        <div class="w-8 h-8 bg-gray-500 rounded-full flex items-center justify-center text-white font-bold text-sm animate-pulse">...</div>
+        <div>
+          <div class="text-white font-semibold">Cargando...</div>
+          <div class="text-gray-300 text-sm font-medium">Obteniendo precios</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+// Trading pairs configuration
+const TRADING_PAIRS = [
+  {
+    symbol: 'BTCUSDT',
+    display: 'BTC/USD',
+    icon: '₿',
+    color: 'bg-orange-500',
+    api: 'binance'
+  },
+  {
+    symbol: 'ETHUSDT',
+    display: 'ETH/USD',
+    icon: 'Ξ',
+    color: 'bg-blue-500',
+    api: 'binance'
+  },
+  {
+    symbol: 'BNBUSDT',
+    display: 'BNB/USD',
+    icon: 'B',
+    color: 'bg-yellow-500',
+    api: 'binance'
+  },
+  {
+    symbol: 'EURUSD',
+    display: 'EUR/USD',
+    icon: '€',
+    color: 'bg-blue-600',
+    api: 'fixer'
+  },
+  {
+    symbol: 'JPYUSD',
+    display: 'JPY/USD',
+    icon: '¥',
+    color: 'bg-red-500',
+    api: 'fixer'
+  },
+  {
+    symbol: 'GBPEUR',
+    display: 'GBP/EUR',
+    icon: '£',
+    color: 'bg-green-600',
+    api: 'fixer'
+  },
+  {
+    symbol: 'GBPUSD',
+    display: 'GBP/USD',
+    icon: '£',
+    color: 'bg-purple-600',
+    api: 'fixer'
+  }
+];
+
+let previousPrices = {};
+
+// Fetch crypto prices from Binance
+async function fetchBinancePrices() {
+  try {
+    const cryptoSymbols = TRADING_PAIRS
+      .filter(pair => pair.api === 'binance')
+      .map(pair => pair.symbol);
+    
+    const promises = cryptoSymbols.map(symbol => 
+      fetch(`https://api.binance.com/api/v3/ticker/price?symbol=${symbol}`)
+        .then(res => res.json())
+    );
+    
+    const results = await Promise.all(promises);
+    const prices = {};
+    
+    results.forEach((result, index) => {
+      if (result.price) {
+        prices[cryptoSymbols[index]] = parseFloat(result.price);
+      }
+    });
+    
+    return prices;
+  } catch (error) {
+    console.error('Error fetching Binance prices:', error);
+    return {};
+  }
+}
+
+// Fetch forex rates (simplified - using static data for demo)
+async function fetchForexRates() {
+  // Note: For production, you'd use a real forex API like Fixer.io, Alpha Vantage, etc.
+  // Here we'll use mock data that updates slightly
+  const baseRates = {
+    EURUSD: 1.0876,
+    JPYUSD: 0.0067,
+    GBPEUR: 1.1654,
+    GBPUSD: 1.2678
+  };
+  
+  // Add small random variations to simulate live data
+  const rates = {};
+  Object.keys(baseRates).forEach(pair => {
+    const variation = (Math.random() - 0.5) * 0.02; // ±1% variation
+    rates[pair] = baseRates[pair] * (1 + variation);
+  });
+  
+  return rates;
+}
+
+// Calculate price change percentage
+function calculateChange(current, previous) {
+  if (!previous) return 0;
+  return ((current - previous) / previous) * 100;
+}
+
+// Format price based on currency type
+function formatPrice(price, symbol) {
+  if (symbol.includes('USD') && !symbol.includes('JPY')) {
+    return `$${price.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
+  } else if (symbol === 'JPYUSD') {
+    return `¥${(1/price).toLocaleString('en-US', { minimumFractionDigits: 0, maximumFractionDigits: 0 })}`;
+  } else {
+    return price.toLocaleString('en-US', { minimumFractionDigits: 4, maximumFractionDigits: 4 });
+  }
+}
+
+// Create ticker item HTML
+function createTickerItem(pair, price) {
+  const change = calculateChange(price, previousPrices[pair.symbol]);
+  const isPositive = change >= 0;
+  const changeClass = isPositive ? 'text-green-300' : 'text-red-300';
+  const changeSymbol = isPositive ? '+' : '';
+  
+  return `
+    <div class="crypto-pair">
+      <div class="flex items-center gap-3">
+        <div class="w-8 h-8 ${pair.color} rounded-full flex items-center justify-center text-white font-bold text-sm">${pair.icon}</div>
+        <div>
+          <div class="text-white font-semibold">${pair.display}</div>
+          <div class="${changeClass} text-sm font-medium">
+            ${formatPrice(price, pair.symbol)} ${changeSymbol}${change.toFixed(2)}%
+          </div>
+        </div>
+      </div>
+    </div>
+  `;
+}
+
+// Update ticker with fresh data
+async function updateTicker() {
+  try {
+    const [binancePrices, forexRates] = await Promise.all([
+      fetchBinancePrices(),
+      fetchForexRates()
+    ]);
+    
+    const allPrices = { ...binancePrices, ...forexRates };
+    
+    const tickerContent = document.getElementById('crypto-ticker-content');
+    if (tickerContent && Object.keys(allPrices).length > 0) {
+      // Create ticker items
+      let tickerHTML = '';
+      
+      TRADING_PAIRS.forEach(pair => {
+        if (allPrices[pair.symbol]) {
+          tickerHTML += createTickerItem(pair, allPrices[pair.symbol]);
+        }
+      });
+      
+      // Duplicate for continuous scroll
+      tickerHTML += tickerHTML;
+      
+      tickerContent.innerHTML = tickerHTML;
+      
+      // Update previous prices for next comparison
+      previousPrices = { ...allPrices };
+    }
+  } catch (error) {
+    console.error('Error updating ticker:', error);
+  }
+}
+
+// Initialize ticker
+document.addEventListener('DOMContentLoaded', () => {
+  updateTicker();
+  
+  // Update every 10 seconds
+  setInterval(updateTicker, 10000);
+});
+</script>

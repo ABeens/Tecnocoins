@@ -1,0 +1,100 @@
+@import "tailwindcss";
+
+/* Crypto Ticker Styles */
+.crypto-ticker {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.crypto-ticker-content {
+  display: inline-flex;
+  gap: 3rem;
+  animation: scroll-horizontal 30s linear infinite;
+  padding: 0 2rem;
+}
+
+.crypto-pair {
+  min-width: 200px;
+  padding: 1rem 1.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 1rem;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  flex-shrink: 0;
+}
+
+@keyframes scroll-horizontal {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .crypto-ticker-content {
+    gap: 1.5rem;
+    animation: scroll-horizontal-mobile 25s linear infinite;
+    padding: 0 1rem;
+  }
+  
+  .crypto-pair {
+    min-width: 140px;
+    padding: 0.5rem 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .crypto-ticker-content {
+    gap: 1rem;
+    animation: scroll-horizontal-mobile 20s linear infinite;
+    padding: 0 0.5rem;
+  }
+  
+  .crypto-pair {
+    min-width: 120px;
+    padding: 0.375rem 0.5rem;
+    font-size: 0.875rem;
+  }
+  
+  .crypto-pair .w-8 {
+    width: 1.5rem;
+    height: 1.5rem;
+    font-size: 0.75rem;
+  }
+}
+
+@keyframes scroll-horizontal-mobile {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-60%);
+  }
+}
+
+/* Pause animation on hover */
+.crypto-ticker:hover .crypto-ticker-content {
+  animation-play-state: paused;
+}
+
+/* Loading placeholder animation */
+.loading-placeholder {
+  opacity: 0.7;
+}
+
+.loading-placeholder .animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}

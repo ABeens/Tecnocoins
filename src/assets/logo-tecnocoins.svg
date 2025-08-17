@@ -1,0 +1,20 @@
+<svg width="300" height="300" viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g>
+    <!-- Hexágonos principales -->
+    <polygon points="150,40 165,49 165,67 150,76 135,67 135,49" fill="#2A6F97"/>
+    <polygon points="150,90 165,99 165,117 150,126 135,117 135,99" fill="#2A6F97"/>
+    <polygon points="150,140 165,149 165,167 150,176 135,167 135,149" fill="#2A6F97"/>
+    <polygon points="150,190 165,199 165,217 150,226 135,217 135,199" fill="#2A6F97"/>
+    <polygon points="110,70 125,79 125,97 110,106 95,97 95,79" fill="#2A6F97"/>
+    <polygon points="190,70 205,79 205,97 190,106 175,97 175,79" fill="#2A6F97"/>
+    <!-- Hexágonos secundarios claros -->
+    <polygon points="90,100 105,109 105,127 90,136 75,127 75,109" fill="#7EC4E4"/>
+    <polygon points="210,100 225,109 225,127 210,136 195,127 195,109" fill="#7EC4E4"/>
+    <polygon points="70,130 85,139 85,157 70,166 55,157 55,139" fill="#B3E0F7"/>
+    <polygon points="230,130 245,139 245,157 230,166 215,157 215,139" fill="#B3E0F7"/>
+    <!-- Más hexágonos secundarios -->
+    <polygon points="110,170 125,179 125,197 110,206 95,197 95,179" fill="#7EC4E4"/>
+    <polygon points="190,170 205,179 205,197 190,206 175,197 175,179" fill="#7EC4E4"/>
+    <polygon points="150,240 165,249 165,267 150,276 135,267 135,249" fill="#B3E0F7"/>
+  </g>
+</svg> 

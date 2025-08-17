@@ -1,0 +1,128 @@
+---
+import Layout from '../layouts/Layout.astro';
+import '../styles/global.css';
+
+---
+
+<Layout>
+  <main class="max-w-7xl mx-auto py-16 px-4">
+    <!-- Header Section -->
+    <div class="text-center mb-16">
+      <h1 class="text-5xl font-bold text-[#2A6F97] mb-6">Nuestros Servicios</h1>
+      <div class="w-24 h-1 bg-gradient-to-r from-[#4B8BBE] to-[#2A6F97] rounded-full mx-auto mb-6"></div>
+      <p class="text-lg text-gray-600 max-w-2xl mx-auto">Descubre nuestras soluciones especializadas en criptomonedas y tecnología blockchain</p>
+    </div>
+
+    <!-- Services Grid -->
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
+      <!-- Mentorías Personalizadas -->
+      <div class="group bg-gradient-to-br from-white to-gray-50 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-100">
+        <div class="relative overflow-hidden">
+          <img src="/src/assets/mentor.jpg" alt="Mentorías Personalizadas en Criptomonedas" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent group-hover:from-black/60 transition-all duration-300"></div>
+          <div class="absolute bottom-4 left-4 text-white">
+            <h3 class="text-2xl font-bold mb-2">Mentorías Personalizadas</h3>
+            <p class="text-sm opacity-90">Asesoramiento individual especializado</p>
+          </div>
+        </div>
+        <div class="p-6">
+          <p class="text-gray-600 mb-4">Recibe orientación personalizada de expertos en el mundo de las criptomonedas y blockchain.</p>
+          <a href="https://wa.me/573214012935?text=Hola,%20me%20interesa%20conocer%20m%C3%A1s%20sobre%20las%20mentor%C3%ADas%20personalizadas" target="_blank" class="flex items-center text-[#4B8BBE] font-semibold group-hover:text-[#2A6F97] transition-colors duration-300">
+            <span>Conoce más</span>
+            <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Cursos Presenciales -->
+      <div class="group bg-gradient-to-br from-white to-gray-50 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-100">
+        <div class="relative overflow-hidden">
+          <img src="/src/assets/presencial.png" alt="Cursos Presenciales de Criptomonedas" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent group-hover:from-black/60 transition-all duration-300"></div>
+          <div class="absolute bottom-4 left-4 text-white">
+            <h3 class="text-2xl font-bold mb-2">Cursos Presenciales</h3>
+            <p class="text-sm opacity-90">Aprendizaje directo y práctico</p>
+          </div>
+        </div>
+        <div class="p-6">
+          <p class="text-gray-600 mb-4">Participa en nuestros cursos presenciales para una experiencia de aprendizaje inmersiva y práctica.</p>
+          <a href="https://wa.me/573214012935?text=Hola,%20me%20interesa%20conocer%20m%C3%A1s%20sobre%20los%20cursos%20presenciales" target="_blank" class="flex items-center text-[#4B8BBE] font-semibold group-hover:text-[#2A6F97] transition-colors duration-300">
+            <span>Conoce más</span>
+            <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Cursos en Línea -->
+      <div class="group bg-gradient-to-br from-white to-gray-50 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-100">
+        <div class="relative overflow-hidden">
+          <img src="/src/assets/online.jpg" alt="Cursos en Línea de Criptomonedas" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent group-hover:from-black/60 transition-all duration-300"></div>
+          <div class="absolute bottom-4 left-4 text-white">
+            <h3 class="text-2xl font-bold mb-2">Cursos en Línea</h3>
+            <p class="text-sm opacity-90">Flexibilidad y comodidad</p>
+          </div>
+        </div>
+        <div class="p-6">
+          <p class="text-gray-600 mb-4">Accede a nuestro contenido educativo desde cualquier lugar y a tu propio ritmo.</p>
+          <a href="https://wa.me/573214012935?text=Hola,%20me%20interesa%20conocer%20m%C3%A1s%20sobre%20los%20cursos%20en%20l%C3%ADnea" target="_blank" class="flex items-center text-[#4B8BBE] font-semibold group-hover:text-[#2A6F97] transition-colors duration-300">
+            <span>Conoce más</span>
+            <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Featured Service -->
+    <div class="bg-gradient-to-r from-[#2A6F97] to-[#4B8BBE] rounded-3xl overflow-hidden shadow-2xl">
+      <div class="flex flex-col lg:flex-row">
+        <div class="lg:w-2/3 p-8 lg:p-12 text-white flex flex-col justify-center">
+          <h2 class="text-4xl font-bold mb-6">Consultoría Especializada</h2>
+          <p class="text-xl mb-6 opacity-90">Llevamos años ayudando a empresas e individuos a navegar el complejo mundo de las criptomonedas con éxito.</p>
+          <div class="space-y-4">
+            <div class="flex items-center">
+              <svg class="w-6 h-6 mr-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              <span>Análisis de mercado en tiempo real</span>
+            </div>
+            <div class="flex items-center">
+              <svg class="w-6 h-6 mr-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              <span>Estrategias personalizadas de inversión</span>
+            </div>
+            <div class="flex items-center">
+              <svg class="w-6 h-6 mr-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              <span>Soporte técnico especializado</span>
+            </div>
+          </div>
+          <a href="https://wa.me/573214012935?text=Hola,%20me%20interesa%20solicitar%20una%20consultor%C3%ADa%20especializada" target="_blank" class="mt-8 bg-white text-[#2A6F97] px-8 py-3 rounded-xl font-semibold hover:bg-gray-100 transition-colors duration-300 w-fit inline-block">
+            Solicitar Consulta
+          </a>
+        </div>
+        <div class="lg:w-1/3 relative">
+          <img src="/src/assets/millan.png" alt="Consultoría Especializada en Blockchain" class="hidden lg:block w-full h-80 lg:h-full object-cover" />
+          <div class="absolute inset-0 bg-gradient-to-r from-[#2A6F97]/20 to-transparent"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA Section -->
+    <div class="text-center mt-16">
+      <h2 class="text-3xl font-bold text-[#2A6F97] mb-4">¿Listo para comenzar?</h2>
+      <p class="text-lg text-gray-600 mb-8">Contáctanos hoy y descubre cómo podemos ayudarte a alcanzar tus objetivos</p>
+      <a href="https://wa.me/573214012935?text=Hola,%20quiero%20conocer%20m%C3%A1s%20sobre%20sus%20servicios" target="_blank" class="bg-gradient-to-r from-[#4B8BBE] to-[#2A6F97] text-white px-8 py-4 rounded-xl font-semibold hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 inline-block">
+        Contactar Ahora
+      </a>
+    </div>
+  </main>
+</Layout> 
