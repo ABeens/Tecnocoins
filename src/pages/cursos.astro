@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import PaymentModal from '../components/PaymentModal.astro';
+import tecnocoinsImg from '../assets/tecnocoins.jpeg';
 ---
 
 <Layout>
@@ -10,7 +11,7 @@ import PaymentModal from '../components/PaymentModal.astro';
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-6xl">
       <!-- Curso 1 -->
       <div class="bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center text-center border border-[#eaf6fb] hover:scale-105 transition-transform">
-        <img src="/src/assets/tecnocoins.jpeg" alt="Trading Básico" class="w-32 h-32 object-cover rounded-xl mb-4" />
+        <img src={tecnocoinsImg} alt="Trading Básico" class="w-32 h-32 object-cover rounded-xl mb-4" />
         <h3 class="text-xl font-bold text-[#2A6F97] mb-2">Trading Básico</h3>
         <p class="text-[#4B8BBE] font-semibold mb-2">$49.99 USD</p>
         <p class="text-[#2A6F97] mb-4">Aprende los fundamentos del trading y cómo empezar a invertir en los mercados financieros desde cero.</p>
@@ -25,7 +26,7 @@ import PaymentModal from '../components/PaymentModal.astro';
       </div>
       <!-- Curso 2 -->
       <div class="bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center text-center border border-[#eaf6fb] hover:scale-105 transition-transform">
-        <img src="/src/assets/tecnocoins.jpeg" alt="Finanzas Personales" class="w-32 h-32 object-cover rounded-xl mb-4" />
+        <img src={tecnocoinsImg} alt="Finanzas Personales" class="w-32 h-32 object-cover rounded-xl mb-4" />
         <h3 class="text-xl font-bold text-[#2A6F97] mb-2">Finanzas Personales</h3>
         <p class="text-[#4B8BBE] font-semibold mb-2">$39.99 USD</p>
         <p class="text-[#2A6F97] mb-4">Domina la gestión de tu dinero, aprende a ahorrar, invertir y planificar tu futuro financiero.</p>
@@ -40,7 +41,7 @@ import PaymentModal from '../components/PaymentModal.astro';
       </div>
       <!-- Curso 3 -->
       <div class="bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center text-center border border-[#eaf6fb] hover:scale-105 transition-transform">
-        <img src="/src/assets/tecnocoins.jpeg" alt="Inversiones Inteligentes" class="w-32 h-32 object-cover rounded-xl mb-4" />
+        <img src={tecnocoinsImg} alt="Inversiones Inteligentes" class="w-32 h-32 object-cover rounded-xl mb-4" />
         <h3 class="text-xl font-bold text-[#2A6F97] mb-2">Inversiones Inteligentes</h3>
         <p class="text-[#4B8BBE] font-semibold mb-2">$59.99 USD</p>
         <p class="text-[#2A6F97] mb-4">Descubre estrategias avanzadas para invertir de manera inteligente y maximizar tus rendimientos.</p>
@@ -55,7 +56,7 @@ import PaymentModal from '../components/PaymentModal.astro';
       </div>
       <!-- Curso 4 -->
       <div class="bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center text-center border border-[#eaf6fb] hover:scale-105 transition-transform">
-        <img src="/src/assets/tecnocoins.jpeg" alt="Criptomonedas para Principiantes" class="w-32 h-32 object-cover rounded-xl mb-4" />
+        <img src={tecnocoinsImg} alt="Criptomonedas para Principiantes" class="w-32 h-32 object-cover rounded-xl mb-4" />
         <h3 class="text-xl font-bold text-[#2A6F97] mb-2">Criptomonedas para Principiantes</h3>
         <p class="text-[#4B8BBE] font-semibold mb-2">$44.99 USD</p>
         <p class="text-[#2A6F97] mb-4">Conoce el mundo de las criptomonedas, cómo funcionan y cómo empezar a invertir de forma segura.</p>
@@ -70,7 +71,7 @@ import PaymentModal from '../components/PaymentModal.astro';
       </div>
       <!-- Curso 5 -->
       <div class="bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center text-center border border-[#eaf6fb] hover:scale-105 transition-transform">
-        <img src="/src/assets/tecnocoins.jpeg" alt="Bolsa de Valores desde Cero" class="w-32 h-32 object-cover rounded-xl mb-4" />
+        <img src={tecnocoinsImg} alt="Bolsa de Valores desde Cero" class="w-32 h-32 object-cover rounded-xl mb-4" />
         <h3 class="text-xl font-bold text-[#2A6F97] mb-2">Bolsa de Valores desde Cero</h3>
         <p class="text-[#4B8BBE] font-semibold mb-2">$54.99 USD</p>
         <p class="text-[#2A6F97] mb-4">Aprende a invertir en la bolsa de valores, entender los mercados y tomar decisiones informadas.</p>
@@ -85,7 +86,7 @@ import PaymentModal from '../components/PaymentModal.astro';
       </div>
       <!-- Curso 6 -->
       <div class="bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center text-center border border-[#eaf6fb] hover:scale-105 transition-transform">
-        <img src="/src/assets/tecnocoins.jpeg" alt="Emprendimiento y Finanzas" class="w-32 h-32 object-cover rounded-xl mb-4" />
+        <img src={tecnocoinsImg} alt="Emprendimiento y Finanzas" class="w-32 h-32 object-cover rounded-xl mb-4" />
         <h3 class="text-xl font-bold text-[#2A6F97] mb-2">Emprendimiento y Finanzas</h3>
         <p class="text-[#4B8BBE] font-semibold mb-2">$34.99 USD</p>
         <p class="text-[#2A6F97] mb-4">Desarrolla tu mentalidad emprendedora y aprende a gestionar las finanzas de tu propio negocio.</p>
