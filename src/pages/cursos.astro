@@ -3,105 +3,104 @@ import Layout from '../layouts/Layout.astro';
 import PaymentModal from '../components/PaymentModal.astro';
 import { Image } from 'astro:assets';
 import tecnocoinsImg from '../assets/tecnocoins.jpeg';
+import binanceImg from '../assets/cursos/monetizar-con-binance.png';
 
-
+const courses = [
+  {
+    name: "Programa de Formacion En Trading en Inversiones",
+    presencial: "$237,00",
+    online: "$157,00",
+    pregrabado: "$47,00",
+    dates: "12-jul al 20-sept / 04-Oct al 22-nov",
+    image: binanceImg
+  },
+  {
+    name: "Planificacion Financiera",
+    presencial: "$38,99",
+    online: "$30,00",
+    pregrabado: "$26,00",
+    dates: "4-oct / 13-dic",
+    image: binanceImg
+  },
+  {
+    name: "5 formas de Monetizar con Binance",
+    presencial: "$45,00",
+    online: "$30,00",
+    pregrabado: "$26,00",
+    dates: "20-sep / 15-nov",
+    image: binanceImg
+  },
+  {
+    name: "Domina tu Tiempo, Domina Tu Productividad",
+    presencial: "$45,00",
+    online: "$30,00",
+    pregrabado: "$26,00",
+    dates: "6-sep",
+    image: binanceImg
+  },
+  {
+    name: "Marketing y Redes Sociales",
+    presencial: "$45,00",
+    online: "$30,00",
+    pregrabado: "$26,00",
+    dates: "18-oct",
+    image: binanceImg
+  },
+  {
+    name: "NeuroVentas",
+    presencial: "$45,00",
+    online: "$30,00",
+    pregrabado: "$26,00",
+    dates: "1-nov",
+    image: binanceImg
+  },
+  {
+    name: "Facebook ADS",
+    presencial: "$45,00",
+    online: "$30,00",
+    pregrabado: "$26,00",
+    dates: "",
+    image: binanceImg
+  },
+  {
+    name: "Binance P2P",
+    presencial: "$119,00",
+    online: "$78,50",
+    pregrabado: "$35,00",
+    dates: "",
+    image: binanceImg
+  }
+];
 ---
 
 <Layout>
   <section class="w-full flex flex-col items-center justify-center py-12 px-4 bg-[#f6fbfd]">
     <h1 class="text-2xl md:text-3xl font-bold text-[#2A6F97] mb-2 text-center">Nuestros Cursos</h1>
     <div class="w-16 h-1 bg-[#4B8BBE] rounded mx-auto mb-8"></div>
+    
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-6xl">
-      <!-- Curso 1 -->
-      <div class="bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center text-center border border-[#eaf6fb] hover:scale-105 transition-transform">
-        <Image src={tecnocoinsImg} alt="Trading Básico" class="w-32 h-32 object-cover rounded-xl mb-4" />
-        <h3 class="text-xl font-bold text-[#2A6F97] mb-2">Trading Básico</h3>
-        <p class="text-[#4B8BBE] font-semibold mb-2">$49.99 USD</p>
-        <p class="text-[#2A6F97] mb-4">Aprende los fundamentos del trading y cómo empezar a invertir en los mercados financieros desde cero.</p>
-        <button 
-          class="bg-[#4B8BBE] text-white font-bold py-2 px-6 rounded-lg shadow hover:bg-[#2A6F97] transition"
-          data-course-button
-          data-course-title="Trading Básico"
-          data-course-price="$49.99 USD"
-        >
-          Quiero este curso
-        </button>
-      </div>
-      <!-- Curso 2 -->
-      <div class="bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center text-center border border-[#eaf6fb] hover:scale-105 transition-transform">
-        <Image src={tecnocoinsImg} alt="Finanzas Personales" class="w-32 h-32 object-cover rounded-xl mb-4" />
-        <h3 class="text-xl font-bold text-[#2A6F97] mb-2">Finanzas Personales</h3>
-        <p class="text-[#4B8BBE] font-semibold mb-2">$39.99 USD</p>
-        <p class="text-[#2A6F97] mb-4">Domina la gestión de tu dinero, aprende a ahorrar, invertir y planificar tu futuro financiero.</p>
-        <button 
-          class="bg-[#4B8BBE] text-white font-bold py-2 px-6 rounded-lg shadow hover:bg-[#2A6F97] transition"
-          data-course-button
-          data-course-title="Finanzas Personales"
-          data-course-price="$39.99 USD"
-        >
-          Quiero este curso
-        </button>
-      </div>
-      <!-- Curso 3 -->
-      <div class="bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center text-center border border-[#eaf6fb] hover:scale-105 transition-transform">
-        <Image src={tecnocoinsImg} alt="Inversiones Inteligentes" class="w-32 h-32 object-cover rounded-xl mb-4" />
-        <h3 class="text-xl font-bold text-[#2A6F97] mb-2">Inversiones Inteligentes</h3>
-        <p class="text-[#4B8BBE] font-semibold mb-2">$59.99 USD</p>
-        <p class="text-[#2A6F97] mb-4">Descubre estrategias avanzadas para invertir de manera inteligente y maximizar tus rendimientos.</p>
-        <button 
-          class="bg-[#4B8BBE] text-white font-bold py-2 px-6 rounded-lg shadow hover:bg-[#2A6F97] transition"
-          data-course-button
-          data-course-title="Inversiones Inteligentes"
-          data-course-price="$59.99 USD"
-        >
-          Quiero este curso
-        </button>
-      </div>
-      <!-- Curso 4 -->
-      <div class="bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center text-center border border-[#eaf6fb] hover:scale-105 transition-transform">
-        <Image src={tecnocoinsImg} alt="Criptomonedas para Principiantes" class="w-32 h-32 object-cover rounded-xl mb-4" />
-        <h3 class="text-xl font-bold text-[#2A6F97] mb-2">Criptomonedas para Principiantes</h3>
-        <p class="text-[#4B8BBE] font-semibold mb-2">$44.99 USD</p>
-        <p class="text-[#2A6F97] mb-4">Conoce el mundo de las criptomonedas, cómo funcionan y cómo empezar a invertir de forma segura.</p>
-        <button 
-          class="bg-[#4B8BBE] text-white font-bold py-2 px-6 rounded-lg shadow hover:bg-[#2A6F97] transition"
-          data-course-button
-          data-course-title="Criptomonedas para Principiantes"
-          data-course-price="$44.99 USD"
-        >
-          Quiero este curso
-        </button>
-      </div>
-      <!-- Curso 5 -->
-      <div class="bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center text-center border border-[#eaf6fb] hover:scale-105 transition-transform">
-        <Image src={tecnocoinsImg} alt="Bolsa de Valores desde Cero" class="w-32 h-32 object-cover rounded-xl mb-4" />
-        <h3 class="text-xl font-bold text-[#2A6F97] mb-2">Bolsa de Valores desde Cero</h3>
-        <p class="text-[#4B8BBE] font-semibold mb-2">$54.99 USD</p>
-        <p class="text-[#2A6F97] mb-4">Aprende a invertir en la bolsa de valores, entender los mercados y tomar decisiones informadas.</p>
-        <button 
-          class="bg-[#4B8BBE] text-white font-bold py-2 px-6 rounded-lg shadow hover:bg-[#2A6F97] transition"
-          data-course-button
-          data-course-title="Bolsa de Valores desde Cero"
-          data-course-price="$54.99 USD"
-        >
-          Quiero este curso
-        </button>
-      </div>
-      <!-- Curso 6 -->
-      <div class="bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center text-center border border-[#eaf6fb] hover:scale-105 transition-transform">
-        <Image src={tecnocoinsImg} alt="Emprendimiento y Finanzas" class="w-32 h-32 object-cover rounded-xl mb-4" />
-        <h3 class="text-xl font-bold text-[#2A6F97] mb-2">Emprendimiento y Finanzas</h3>
-        <p class="text-[#4B8BBE] font-semibold mb-2">$34.99 USD</p>
-        <p class="text-[#2A6F97] mb-4">Desarrolla tu mentalidad emprendedora y aprende a gestionar las finanzas de tu propio negocio.</p>
-        <button 
-          class="bg-[#4B8BBE] text-white font-bold py-2 px-6 rounded-lg shadow hover:bg-[#2A6F97] transition"
-          data-course-button
-          data-course-title="Emprendimiento y Finanzas"
-          data-course-price="$34.99 USD"
-        >
-          Quiero este curso
-        </button>
-      </div>
+      {courses.map((course) => (
+        <div class="bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center text-center border border-[#eaf6fb] hover:scale-105 transition-transform">
+          <Image src={course.image} alt={course.name} class="w-32 h-32 object-cover rounded-xl mb-4" />
+          <h3 class="text-xl font-bold text-[#2A6F97] mb-2">{course.name}</h3>
+          <div class="mb-2 space-y-1 text-sm">
+            <p class="text-[#4B8BBE] font-semibold">Presencial: {course.presencial}</p>
+            <p class="text-[#4B8BBE] font-semibold">Online: {course.online}</p>
+            <p class="text-[#4B8BBE] font-semibold">Pregrabado: {course.pregrabado}</p>
+          </div>
+          {(course.dates && false) && (
+            <p class="text-[#2A6F97] text-xs mb-4">Fechas: {course.dates}</p>
+          )}
+          <button 
+            class="bg-[#4B8BBE] text-white font-bold py-2 px-6 rounded-lg shadow hover:bg-[#2A6F97] transition mt-auto"
+            data-course-button
+            data-course-title={course.name}
+            data-course-price={course.presencial}
+          >
+            Quiero este curso
+          </button>
+        </div>
+      ))}
     </div>
   </section>
   

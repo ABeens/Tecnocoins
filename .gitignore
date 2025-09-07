@@ -98,3 +98,4 @@ config/keys.js
 
 .astro/types.d.ts
 node_modules/.vite/deps/_metadata.json
+/node_modules
